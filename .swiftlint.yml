@@ -1,0 +1,178 @@
+# =========================
+# SwiftLint Configuration
+# =========================
+
+# =========================
+# 除外するパス
+# =========================
+excluded:
+  - Carthage
+  - Pods
+  - DerivedData
+  - .build
+  - vendor
+  - ${PWD}/Carthage
+  - ${PWD}/Pods
+  - ${PWD}/DerivedData
+
+# =========================
+# 無効化するルール
+# =========================
+disabled_rules:
+  - trailing_whitespace        # 行末の空白（好みで有効化可）
+  - todo                       # TODO/FIXMEコメントの警告（開発中は無効推奨）
+  # - line_length              # 必要に応じてコメント解除
+
+# =========================
+# オプトインルール（デフォルトOFF → 有効化）
+# =========================
+opt_in_rules:
+  - empty_count                # .count == 0 より .isEmpty を推奨
+  - empty_string               # 空文字列チェックに .isEmpty を推奨
+  - closure_spacing            # クロージャの括弧内スペース
+  - contains_over_first_not_nil # first(where:) != nil より contains を推奨
+  - discouraged_optional_boolean # Optional<Bool> の使用を警告
+  - empty_xctest_method        # 空のテストメソッドを警告
+  - fatal_error_message        # fatalError にメッセージを必須化
+  - first_where                # filter.first より first(where:) を推奨
+  - force_unwrapping           # 強制アンラップを警告
+  - implicit_return            # 単一式クロージャの暗黙return
+  - last_where                 # filter.last より last(where:) を推奨
+  - modifier_order             # 修飾子の順序を統一
+  - overridden_super_call      # override時のsuper呼び出しチェック
+  - private_action             # @IBAction は private に
+  - private_outlet             # @IBOutlet は private に
+  - redundant_nil_coalescing   # 冗長な ?? nil を警告
+  - sorted_first_last          # sorted().first より min() を推奨
+  - toggle_bool                # x = !x より x.toggle() を推奨
+  - unowned_variable_capture   # unowned キャプチャの警告
+  - vertical_whitespace_closing_braces # 閉じ括弧前の空行を禁止
+  - yoda_condition             # 定数を左辺に置く条件式を警告
+
+# =========================
+# ルールのカスタマイズ
+# =========================
+
+# 1行あたりの文字数制限
+line_length:
+  warning: 120
+  error: 200
+  ignores_comments: true
+  ignores_urls: true
+  ignores_interpolated_strings: true
+
+# 関数の行数制限
+function_body_length:
+  warning: 50
+  error: 100
+
+# ファイルの行数制限
+file_length:
+  warning: 500
+  error: 1000
+  ignore_comment_only_lines: true
+
+# 型の行数制限
+type_body_length:
+  warning: 300
+  error: 500
+
+# 関数のパラメータ数制限
+function_parameter_count:
+  warning: 5
+  error: 8
+  ignores_default_parameters: true
+
+# サイクロマティック複雑度
+cyclomatic_complexity:
+  warning: 10
+  error: 20
+  ignores_case_statements: true
+
+# ネストの深さ制限
+nesting:
+  type_level:
+    warning: 3
+    error: 5
+  function_level:
+    warning: 3
+    error: 5
+
+# 識別子の長さ
+identifier_name:
+  min_length:
+    warning: 2
+    error: 1
+  max_length:
+    warning: 50
+    error: 60
+  excluded:
+    - id
+    - Id
+    - ID
+    - x
+    - y
+    - z
+    - i
+    - j
+    - k
+    - ok
+    - to
+    - on
+    - no
+    - go
+    - be
+    - at
+    - or
+    - if
+    - it
+    - of
+
+# 型名の長さ
+type_name:
+  min_length:
+    warning: 3
+    error: 2
+  max_length:
+    warning: 50
+    error: 60
+
+# 大きいタプルの警告
+large_tuple:
+  warning: 3
+  error: 4
+
+# 垂直方向の空白行
+vertical_whitespace:
+  max_empty_lines: 2
+
+# コロンのスペース
+colon:
+  apply_to_dictionaries: true
+
+# trailing_comma（配列・辞書の末尾カンマ）
+trailing_comma:
+  mandatory_comma: false
+
+# =========================
+# カスタムルール（必要に応じて追加）
+# =========================
+# custom_rules:
+#   no_print:
+#     name: "No print"
+#     regex: "print\\("
+#     message: "print() は本番コードでは使用しないでください。Logger を使用してください。"
+#     severity: warning
+
+# =========================
+# アナライザールール
+# =========================
+analyzer_rules:
+  - unused_import              # 未使用インポートを警告
+
+# =========================
+# レポーター設定
+# =========================
+# Xcodeで使用する場合は xcode を指定
+reporter: "xcode"
+

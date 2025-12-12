@@ -1,0 +1,14 @@
+# =========================
+# Mintfile
+# =========================
+# Usage: mint bootstrap
+
+# SwiftLint - Swiftコードのスタイルチェック
+realm/SwiftLint@0.57.1
+
+# SwiftFormat - Swiftコードの自動フォーマット
+nicklockwood/SwiftFormat@0.54.6
+
+
+
+

@@ -1,0 +1,98 @@
+# =========================
+# SwiftFormat Configuration
+# =========================
+
+# =========================
+# 除外するパス
+# =========================
+--exclude Carthage,Pods,DerivedData,.build,vendor
+
+# =========================
+# Swiftバージョン
+# =========================
+--swiftversion 5.9
+
+# =========================
+# インデント設定
+# =========================
+--indent 4
+--tabwidth 4
+--smarttabs enabled
+--indentcase false
+--ifdef indent
+
+# =========================
+# 空白・改行設定
+# =========================
+--trimwhitespace always
+--linebreaks lf
+--maxwidth 120
+--wraparguments before-first
+--wrapparameters before-first
+--wrapcollections before-first
+--wrapconditions after-first
+--wrapreturntype if-multiline
+--wrapeffects if-multiline
+--closingparen balanced
+
+# =========================
+# 括弧・スペース設定
+# =========================
+--operatorfunc spaced
+--nospaceoperators 
+--ranges spaced
+--specifierorder 
+
+# =========================
+# self の扱い
+# =========================
+--self remove
+--selfrequired 
+
+# =========================
+# import設定
+# =========================
+--importgrouping alpha
+
+# =========================
+# その他の設定
+# =========================
+--semicolons never
+--commas always
+--decimalgrouping 3,6
+--binarygrouping 4,8
+--octalgrouping 4,8
+--hexgrouping 4,8
+--exponentcase lowercase
+--hexliteralcase uppercase
+--fractiongrouping disabled
+--exponentgrouping disabled
+--stripunusedargs closure-only
+--header ignore
+--conflictmarkers reject
+
+# =========================
+# 有効化するルール
+# =========================
+--enable blankLineAfterImports
+--enable blankLinesBetweenImports
+--enable isEmpty
+--enable markTypes
+--enable organizeDeclarations
+--enable sortDeclarations
+
+# =========================
+# 無効化するルール
+# =========================
+--disable acronyms
+--disable blankLinesAtStartOfScope
+--disable blankLinesAtEndOfScope
+
+# =========================
+# ファイル拡張子
+# =========================
+--extensionacl on-declarations
+
+
+
+

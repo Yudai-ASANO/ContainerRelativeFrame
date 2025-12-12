@@ -1,0 +1,136 @@
+# =========================
+# macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# =========================
+# Xcode
+# =========================
+# Build generated
+build/
+DerivedData/
+
+# Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+# Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.xcodeproj/**/xcuserdata/
+
+# Xcode Workspace Settings
+!*.xcworkspace/contents.xcworkspacedata
+/*.xcworkspace
+!default.xcworkspace
+
+# Playground
+timeline.xctimeline
+playground.xcworkspace
+
+# =========================
+# Swift Package Manager
+# =========================
+Packages/
+Package.pins
+Package.resolved
+.swiftpm/
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# =========================
+# CocoaPods
+# =========================
+# We recommend against adding the Pods directory to your .gitignore.
+# However, you should judge for yourself
+Pods/
+# Podfile.lock
+
+# =========================
+# Carthage
+# =========================
+Carthage/Build/
+Carthage/Checkouts
+
+# =========================
+# Fastlane
+# =========================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# =========================
+# Code Injection
+# =========================
+iOSInjectionProject/
+
+# =========================
+# XcodeGen
+# =========================
+# Generated project file (uncomment if using XcodeGen)
+# *.xcodeproj
+
+# =========================
+# Accio dependency manager
+# =========================
+Dependencies/
+.accio/
+
+# =========================
+# Tuist
+# =========================
+Derived/
+
+# =========================
+# IDEs and Editors
+# =========================
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# =========================
+# Misc
+# =========================
+*.log
+*.tmp
+*.temp
+.env
+.env.local
+
